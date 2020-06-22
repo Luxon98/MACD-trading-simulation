@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt
-from constants import NO_DAYS
+from constants import DAYS_NUMBER
 
 
 def get_days_arr():
-    days_ago = [0] * NO_DAYS
-    for i in range(0, NO_DAYS):
-        days_ago[i] = NO_DAYS - i - 1
+    days_ago = [0] * DAYS_NUMBER
+    for i in range(0, DAYS_NUMBER):
+        days_ago[i] = DAYS_NUMBER - i - 1
 
     return days_ago
 

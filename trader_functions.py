@@ -1,4 +1,4 @@
-from constants import NO_DAYS
+from constants import *
 
 
 def buy_shares(current_price, quantity, no_units, money):
@@ -14,11 +14,11 @@ def sell_shares(current_price, quantity, no_units, money):
 
 
 def run_simulation(samples, macd, signal):
-    current_money, no_units = 500000, 250
+    current_money, no_units = INITIAL_MONEY, INITIAL_SHARES_NUMBER
     initial_value = no_units * samples[0] + current_money
 
     change_flag, bs_flag = False, False
-    for i in range(1, NO_DAYS):
+    for i in range(1, DAYS_NUMBER):
         if macd[i - 1] <= signal[i - 1] and macd[i] > signal[i]:
             change_flag = True
             bs_flag = True
